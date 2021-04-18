@@ -9,14 +9,16 @@ class Application(tk.Frame):
         tk.Frame.__init__(self, master)
 
         self.grid()
-        self.tb = tk.Button(self, text=_("Кнопка"), font = 'Helvetica')
+        self.tb = tk.Button(self, text=_("Кнопка"), font = 'Helvetica', width=30)
         self.tb.grid(row=1, column=0)
-        self.lab = tk.Label(text=_("Текст"))
+        self.lab = tk.Label(text=_("Текст"), width=30)
         self.lab.grid(row=2, column=0)
-        self.lab2 = tk.Label(text=_("Чуть-чуть текста"))
-        self.lab2.grid(row=2, column=1)
 
 
-
-app = Application()
-app.mainloop()
+#app = Application()
+#app.mainloop()
+root = tk.Tk()
+root.title(_("Приложение"))
+root.geometry("300x50")
+app = Application(root)
+root.mainloop()
